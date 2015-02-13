@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-useref",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Useref wrapper ingredient for Laravel Elixir.",
   "main": "index.js",
   "scripts": {
