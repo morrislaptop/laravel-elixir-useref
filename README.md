@@ -10,7 +10,7 @@ Personally I have some real problems with the scriptsIn() and the stylesIn() fun
 
 You need these files compiled in the same way they are loaded in your development environment. 
 
-Read my article on the subject: [Laravel Elixir - Dev or Build Tasks](https://medium.com/@morrislaptop/laravel-elixir-dev-or-Build-tasks-d5be30f16569)
+Read my article on the subject: [Laravel Elixir - Dev or Build Tasks](https://medium.com/@morrislaptop/laravel-elixir-for-dev-tasks-or-build-tasks-d5be30f16569)
 
 ## Getting Started
 Install the module with [npm](https://npmjs.org):
