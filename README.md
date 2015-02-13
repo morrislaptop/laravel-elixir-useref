@@ -1,6 +1,17 @@
 # Laravel-Elixir-Useref
 >This is a simple wrapper around Laravel Elixir for Useref. 
 
+## Why?
+
+Personally I have some real problems with the scriptsIn() and the stylesIn() functions. Blindly combining files in an unspecified order is just asking for trouble:
+
+* You might be including files you didn’t intend — I’m thinking a jquery.scroller.js and a jquery.scroller.min.js
+* Files might be included in the wrong order — your app.js is loaded first before jquery.js and everything breaks
+
+You need these files compiled in the same way they are loaded in your development environment. 
+
+Read my article on the subject: [Laravel Elixir - Dev or Build Tasks](https://medium.com/@morrislaptop/laravel-elixir-dev-or-Build-tasks-d5be30f16569)
+
 ## Getting Started
 Install the module with [npm](https://npmjs.org):
 
@@ -45,7 +56,7 @@ Then you just have to edit your php file(s) and some extra markup, like this:
 
 This will scan your asset dependencies in your `app.blade.php`, concat and minimise those files and put them in your public directory as `css/all.css` and `js/all.js` (you can change the name in the tag if you like). 
 
-This tool is really powerful if you use (laravel-elixir-wiredep)[https://github.com/FabioAntunes/laravel-elixir-wiredep] to inject your assets in:
+This tool is really powerful if you use [laravel-elixir-wiredep](https://github.com/FabioAntunes/laravel-elixir-wiredep) to inject your assets in:
 
     @if ( Config::get('app.debug') )
         <!-- build:css(public) css/all.css -->
