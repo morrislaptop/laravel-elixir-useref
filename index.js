@@ -1,9 +1,9 @@
 var gulp = require('gulp');
-var elixir = require("laravel-elixir");
+var elixir = require('laravel-elixir');
 var utilities = require('laravel-elixir/ingredients/commands/Utilities');
 var $ = require('gulp-load-plugins')();
 
-elixir.extend('build', function(config) {
+elixir.extend('useref', function(config) {
 
 	var config = config || {};
 
@@ -14,7 +14,7 @@ elixir.extend('build', function(config) {
 
 	var src = utilities.buildGulpSrc(config.src, config.baseDir, config.searchLevel);
 
-	gulp.task('build', function() {
+	gulp.task('useref', function() {
 
 		var assets = $.useref.assets();
 
@@ -26,6 +26,6 @@ elixir.extend('build', function(config) {
 			.pipe($.size());
 	});
 
-	return this.queueTask('build');
+	return this.queueTask('useref');
 
 });
