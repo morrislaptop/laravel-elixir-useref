@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/morrislaptop/laravel-elixir-useref/issues"
   },
-  "homepage": "https://github.com/morrislaptop/laravel-elixir-useref"
+  "homepage": "https://github.com/morrislaptop/laravel-elixir-useref",
+  "dependencies": {
+    "gulp-csso": "^1.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-size": "^1.2.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^1.1.1"
+  }
 }
