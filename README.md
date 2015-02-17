@@ -86,7 +86,7 @@ mix.useref({src: false })
 
 
 ## Options
-This wrapper accepts one object for configuration.
+This wrapper accepts two objects for configuration, the first one is for the wrapper itself and the second one is for useref ([documentation](https://github.com/jonkemp/gulp-useref))
 
 These are the default wrapper options:
 ```javascript
@@ -98,13 +98,13 @@ These are the default wrapper options:
 ```
 
 ## Example
-This is an example of a Gulp file that runs wiredep and then compiles all the assets in `master.blade.php`:
+This is an example of a Gulp file that runs wiredep to inject all our assets and then uses useref (searching in the public directory) to compile all the assets in `master.blade.php` :
 
 ```javascript
 var elixir = require('laravel-elixir');
 require('laravel-elixir-useref');
 
 elixir(function(mix) {
-    mix.wiredep().useref({src: 'master.blade.php'});
+    mix.wiredep().useref({src: 'master.blade.php'}, { searchPath: 'public' });
 });
 ```
