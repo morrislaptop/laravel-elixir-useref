@@ -3,9 +3,10 @@ var elixir = require('laravel-elixir');
 var utilities = require('laravel-elixir/ingredients/commands/Utilities');
 var $ = require('gulp-load-plugins')();
 
-elixir.extend('useref', function(config) {
+elixir.extend('useref', function(config, opts) {
 
 	var config = config || {};
+	var opts = opts || {};
 
 	config.baseDir = config.baseDir || 'resources/views';
 	config.src = 'src' in config ? config.src : 'app.blade.php';
@@ -16,7 +17,7 @@ elixir.extend('useref', function(config) {
 
 	gulp.task('useref', function() {
 
-		var assets = $.useref.assets();
+		var assets = $.useref.assets(opts);
 
 		return gulp.src(src)
 			.pipe(assets)
