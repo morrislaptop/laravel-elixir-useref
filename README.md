@@ -75,7 +75,7 @@ Note: It will not replace the assets in your app.blade.php - you should check if
         <script src="js/main.js"></script>
         <!-- endbuild -->
     @else
-        <link rel="stylesheet" href="{{ elixir("js/all.js") }}">
+        <script src="{{ elixir("js/all.js") }}"></script>
     @endif
 
 Instead, if you only want to scan more all your .php files, you may do:
