@@ -11,7 +11,7 @@ Elixir.extend('useref', function(config, opts) {
     opts = opts || {};
 
     config.baseDir = config.baseDir || 'resources/views';
-    config.src = 'src' in config ? config.src : 'app.blade.php';
+    config.src = config.src || false;
     config.searchLevel = config.searchLevel || '**/*.php';
     config.outputDir = config.outputDir || 'public';
 
