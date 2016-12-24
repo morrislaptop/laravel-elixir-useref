@@ -93,7 +93,9 @@ These are the default wrapper options:
 {
     baseDir: 'resources/views', // the folder for your views
     src: 'app.blade.php', // file to search, false to scan
-    searchLevel: '**/*.php' //How many search levels you want
+    searchLevel: '**/*.php', //How many search levels you want
+    minifyJs: true, //If you want to minimise the js files
+    minifyCss: true //If you want to minimise the css files
 }
 ```
 
