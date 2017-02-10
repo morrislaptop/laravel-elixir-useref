@@ -25,8 +25,8 @@ Elixir.extend('useref', function(config, opts) {
 
         return gulp.src(src)
             .pipe(assets)
-            .pipe(config.minifyJs ? $.if('./*.js', $.uglify()) : util.noop())
-            .pipe(config.minifyCss ? $.if('./*.css', $.csso()) : util.noop())
+            .pipe(config.minifyJs ? $.if('**/*.js', $.uglify()) : util.noop())
+            .pipe(config.minifyCss ? $.if('**/*.css', $.csso()) : util.noop())
             .pipe(gulp.dest(config.outputDir))
             .pipe($.size());
     });
