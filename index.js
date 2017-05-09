@@ -21,10 +21,9 @@ Elixir.extend('useref', function(config, opts) {
     new Task('useref', function() {
 
         var src = path.join(config.baseDir, !!config.src ? config.src : config.searchLevel);
-        var assets = $.useref.assets(opts);
 
         return gulp.src(src)
-            .pipe(assets)
+            .pipe(useref(opts))
             .pipe(config.minifyJs ? $.if('**/*.js', $.uglify()) : util.noop())
             .pipe(config.minifyCss ? $.if('**/*.css', $.csso()) : util.noop())
             .pipe(gulp.dest(config.outputDir))
